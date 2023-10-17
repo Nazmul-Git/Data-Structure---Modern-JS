@@ -8,8 +8,10 @@ const studentProfile={
     ],
     reputationColor:function(repu1,repu2){
        console.log(repu1,repu2);
-       this.reputation.push(repu1);
-       console.log(this.reputation);
+       
+
+    //    this.reputation.push(repu1);
+    //    console.log(this.reputation);
     },
     dept:{
        cse:{
@@ -54,6 +56,10 @@ const newReputation=[
         black:0
     }
 ];
-console.log(newReputation);
-studentProfile.reputationColor(newReputation); // last a undefine thake
+// console.log(newReputation);
+// studentProfile.reputationColor(newReputation); // last a undefine thake
 studentProfile.reputationColor(newReputation[0], newReputation[1]); //// last a undefine thake na
+//  BUT shortly we can use here,  spread operator
+studentProfile.reputationColor(...newReputation ); // last a undefine nai.
+studentProfile.reputation=[...studentProfile.reputation,newReputation];
+console.log(studentProfile.reputation);
