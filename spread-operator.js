@@ -52,7 +52,7 @@ const newReputation=[
         lightYellow:40,
         yellow:50
     },
-    black={
+    {
         black:0
     }
 ];
@@ -61,5 +61,12 @@ const newReputation=[
 studentProfile.reputationColor(newReputation[0], newReputation[1]); //// last a undefine thake na
 //  BUT shortly we can use here,  spread operator
 studentProfile.reputationColor(...newReputation ); // last a undefine nai.
-studentProfile.reputation=[...studentProfile.reputation,newReputation];
+studentProfile.reputation=[...studentProfile.reputation, ...newReputation];
 console.log(studentProfile.reputation);
+console.log(studentProfile.reputation);
+
+// -----copy----
+const studentProfileCopy={...studentProfile};
+studentProfileCopy.studentName='Spread Operator';
+console.log(studentProfileCopy.studentName);
+console.log(studentProfile.studentName);
