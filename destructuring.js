@@ -123,5 +123,9 @@ const obj={l:0, m:0, n:0};
 ({l,m,n}=obj);
 // console.log(l,m,n); // 0 0 0
 
-
+// -> nested object
+const {cse}=dept;
+const {cse:{sub, credit}}=dept;  // Nested object
+// console.log(cse);  //{ sub: 60, credit: 120 }
+// console.log(sub, credit); //60 120
 
