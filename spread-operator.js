@@ -62,11 +62,35 @@ studentProfile.reputationColor(newReputation[0], newReputation[1]); //// last a 
 //  BUT shortly we can use here,  spread operator
 studentProfile.reputationColor(...newReputation ); // last a undefine nai.
 studentProfile.reputation=[...studentProfile.reputation, ...newReputation];
-console.log(studentProfile.reputation);
-console.log(studentProfile.reputation);
+// console.log(studentProfile.reputation);
+// console.log(studentProfile.reputation);
 
 // -----copy----
 const studentProfileCopy={...studentProfile};
 studentProfileCopy.studentName='Spread Operator';
-console.log(studentProfileCopy.studentName);
-console.log(studentProfile.studentName);
+// console.log(studentProfileCopy.studentName);
+// console.log(studentProfile.studentName);
+
+//  SPREAD- because on right side of equal
+const arr5=[1,2, ...[3,4,5]];
+// console.log(arr5); // [ 1, 2, 3, 4, 5 ]
+
+//  REST- because on left side of equal
+// NOTE : rest is must be the last element in array
+const [a,b, ...others]=[1,2,3,4,5];
+// console.log(a,b, others); // 1 2 [ 3, 4, 5 ]
+
+
+//**REST in object**
+const {cse, ...withoutCse}=studentProfile.dept;
+// console.log(withoutCse);
+
+//**spread in function**
+//  Rest parameter
+const add=(...numbers)=>{
+    console.log(numbers)
+}
+
+add(1,2,3,4,5,6,7,8,9); 
+//OUTPUT: [1,2,3,4,5,6,7,8,9]
+// So, REST syntax taking multiple parameter or values and pass them into an array
