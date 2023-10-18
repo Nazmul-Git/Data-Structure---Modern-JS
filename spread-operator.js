@@ -88,9 +88,17 @@ const {cse, ...withoutCse}=studentProfile.dept;
 //**spread in function**
 //  Rest parameter
 const add=(...numbers)=>{
-    console.log(numbers)
+    // console.log(numbers)
+    let sum=0;
+    for(let i=0; i<numbers.length; i++){
+        sum+=numbers[i];
+        
+    };
+    console.log(sum);
 }
 
-add(1,2,3,4,5,6,7,8,9); 
+add(1,2,3,4,5,6,7,8,9); //45
+const result=[1,2,3,4,5,6,7,8,9];
+add(...result);  //45
 //OUTPUT: [1,2,3,4,5,6,7,8,9]
 // So, REST syntax taking multiple parameter or values and pass them into an array
