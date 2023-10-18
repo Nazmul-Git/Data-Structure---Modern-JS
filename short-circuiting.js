@@ -13,3 +13,9 @@ console.log( 5 && 'sunny' );  //sunny
 console.log( '' && 'sunny' );
 console.log( true && 0 && 10 );  // 0 why? = when get falsy value then stop and return the value where he stopped, this situation called ###############short circuiting.
 console.log( undefined && null );
+
+// nullish value: null and undefined (not 0 or '')
+const x=0 || 10;
+const y=0 ?? 10;
+console.log('x=',x); //10
+console.log('y=',y); //0
