@@ -19,3 +19,33 @@ const x=0 || 10;
 const y=0 ?? 10;
 console.log('x=',x); //10
 console.log('y=',y); //0
+
+// OR assignment operator
+const obj1={
+    name:'jamal',
+    id:0
+}
+const obj2={
+    name:'kamal',
+    _id:'no id'
+}
+
+// obj1.id= obj1.id || 10;
+// obj2.id= obj2.id || 10;
+// console.log(obj1, obj2); //{ name: 'jamal', id: 20 } { name: 'kamal', _id: 'no id', id: 10 }
+
+// obj1.id ||= 10
+// obj2.id ||= 10;
+// console.log(obj1, obj2); //{ name: 'jamal', id: 20 } { name: 'kamal', _id: 'no id', id: 10 }
+
+
+// obj1.id ||= 10;
+// obj2.id ||= 10;
+// console.log(obj1, obj2); //{ name: 'jamal', id: 10 } { name: 'kamal', _id: 'no id', id: 10 }
+
+//  Nullish assignment operator
+obj1.id ??= 10;
+obj2.id ??= 10;
+console.log(obj1, obj2); //{ name: 'jamal', id: 0 } { name: 'kamal', _id: 'no id', id: 10 }
+
+
