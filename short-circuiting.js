@@ -49,3 +49,8 @@ obj2.id ??= 10;
 console.log(obj1, obj2); //{ name: 'jamal', id: 0 } { name: 'kamal', _id: 'no id', id: 10 }
 
 
+obj1._id=obj1._id &&= '<ANONYMOUS>';
+obj2._id=obj2._id &&= '<ANONYMOUS>';
+console.log(obj1,obj2);
+
+
