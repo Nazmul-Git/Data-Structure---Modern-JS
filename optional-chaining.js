@@ -18,6 +18,10 @@ const studentProfile={
        eng:{
         sub:45,
         credit:79
+       },
+       law:{
+        sub:0,
+        credit:0
        }
     },
     orderDestructuring: function({myName,address,gpa}){
@@ -30,3 +34,6 @@ const studentProfile={
 // TypeError: Cannot read properties of undefined (reading 'credit')
 console.log(studentProfile ?.dept?.bba?.credit); //undefined
 console.log(studentProfile ?.dept?.cse?.credit); //120
+console.log(studentProfile ?.dept?.law?.credit || 'empty'); //empty because 0 is a falsy value
+console.log(studentProfile ?.dept?.law?.credit ?? 'empty'); // 0 .so always use Nullish ?? method
+ 
