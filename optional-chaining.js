@@ -36,4 +36,8 @@ console.log(studentProfile ?.dept?.bba?.credit); //undefined
 console.log(studentProfile ?.dept?.cse?.credit); //120
 console.log(studentProfile ?.dept?.law?.credit || 'empty'); //empty because 0 is a falsy value
 console.log(studentProfile ?.dept?.law?.credit ?? 'empty'); // 0 .so always use Nullish ?? method
- 
+
+// Array
+const users=[];
+// const users=[{name:'sunny', email:'sun32@gmail.com'}];
+console.log(users[0]?.name ?? 'Empty users');
