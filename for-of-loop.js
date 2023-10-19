@@ -38,6 +38,16 @@ const studentProfile = {
 // for of loop
 const allReputation=studentProfile.reputation;
 for(const rep of allReputation) console.log(rep); // for of loop give only element not index
+// { green: { lightGreen: 65, green: 100 } }
+// { red: { lightRed: 65, red: 100 } }
 
 //  using entries() we can get also index number
 for(const rep of allReputation.entries()) console.log(rep);
+// [ 0, { green: { lightGreen: 65, green: 100 } } ]
+// [ 1, { red: { lightRed: 65, red: 100 } } ]
+//  we can see after use entires() , each item inside an array.
+
+// destructuring rep
+for(const [idx, element] of allReputation.entries()){
+    console.log(`${idx} : ${element}`);
+}
