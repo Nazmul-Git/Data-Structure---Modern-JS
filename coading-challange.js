@@ -38,4 +38,28 @@ const game={
     }
 };
 
+const [players1, players2]=game.players;
+const [gk, ...fieldPlayers]=players1;  // rest operator
+console.log(gk, fieldPlayers);
 
+const allPlayers=[...players1, ...players2];
+console.log(allPlayers);
+
+const players1Final=[...players1, 'Danilo','vinicious','Rodrigo'];
+const players2Final=[...players2, 'otamendi', 'parades','Dybala'];
+console.log(players1Final,players2Final);
+
+
+const {odds:{team1, x:draw, team2}}=game;
+console.log(team1, draw, team2);
+
+const printGoals=(...players)=>{
+    console.log(`${players.length} goal are scored.`);
+}
+// printGoals('Neymar Jr','Coutinho',);
+// printGoals('Leo Messi','Dimaria');
+
+printGoals(...game.scored); //spread operator
+
+team1 < team2 && console.log('Team1 is more likely to win.');
+team1 > team2 && console.log('Team2 is more likely to win.');
