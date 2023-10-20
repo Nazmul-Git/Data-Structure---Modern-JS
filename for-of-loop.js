@@ -25,10 +25,8 @@ const studentProfile = {
       sub: 45,
       credit: 79,
     },
-  },
-  orderDestructuring: function ({ myName, address, gpa }) {
-    console.log(myName, address, gpa); //sunny   dhaka   5
-  },
+  }
+  
 };
 
 // for of loop
