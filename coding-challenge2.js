@@ -41,20 +41,21 @@ const game={
 
 const {scored,odds}=game;
 for(const [idx,scorer] of scored.entries()){
-    console.log(`${idx+1} : ${scorer}`);
+    // console.log(`${idx+1} : ${scorer}`);
 };
 
 let avg=0;
 for(let odd of Object.values(odds)){
-    console.log(odd);
+    // console.log(odd);
     avg+=odd;
-    console.log(avg);
+    // console.log(avg);
 };
 
 // 3
 for(const [team, odds] of Object.entries(game.odds)){
+    console.log(team, odds);
     const str= team==='x' ? 'draw' :`'victory' ${game[team]}`;
-    console.log(`odd of ${str} ${odds}`);
+    // console.log(`odd of ${str} ${odds}`);
 }
 
 
