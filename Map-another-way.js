@@ -1,5 +1,7 @@
 /**
  * Read here..........
+ * Convert object to map,by use new Map()  & map to array using obj.entries(), obj.keys() & obj.values() metods.
+  
  * new Map(Object.entries(obj-name)); this is old method to  conver map from object. And update method is new Map([ [key,value], [], ..]) that convert map from object without use entries method.
  */
 
@@ -28,19 +30,19 @@ const question = new Map([
 for(const [key, value] of question){
     // console.log(key, value);
     if(typeof key === 'number'){
-        // console.log(` Answer ${key} : ${value}`);
+        console.log(` Answer ${key} : ${value}`);
     }
 }
 const answer=3;
 const isTrue=question.get('correct')=== answer;
-// console.log(question.get(isTrue));
+console.log(question.get(isTrue));
 
 
 //###-------- convert array, from map -------------------###
-console.log(...question);
-console.log(question.entries());
-console.log(question.keys());
-console.log(question.values());
+// console.log(...question);
+// console.log(question.entries());
+// console.log(...question.keys());
+// console.log(...question.values());
 
 
 // ---------------------------Proved with Example-----------------------------
@@ -65,9 +67,9 @@ const dept = {
   },
 };
 
-//  convert object to map
-// console.log(Object.entries(dept));
+//###---------  convert object to map -----###
 
+console.log(Object.entries(dept));
 /** OUTPUT :
  [
   [ 'cse', { sub: 60, credit: 120 } ],
@@ -91,6 +93,9 @@ const department = new Map(Object.entries(dept));
 ----------------------------------------
  */
 
+
+
+//  ###-----------Convert map UPDATED-> new Map() -----###
 // Easy & Updated method/data structure ... new Map()
 
 const dept2 = new Map([
