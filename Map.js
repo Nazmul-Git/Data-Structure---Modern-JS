@@ -1,3 +1,4 @@
+// Map is a ES6 advanced level object, less execution time
 const rest= new Map();
 rest.set('name','Italiano')
 .set(1, 'Pizza Burg')
@@ -7,6 +8,7 @@ rest.set('name','Italiano')
 .set(true, 'open')
 .set(false, 'close')
 // console.log(rest.set(2, 'Burger King'));
+
 
 console.log(rest.get('name'));
 console.log(rest.get(1));
