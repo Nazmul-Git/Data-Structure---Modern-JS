@@ -37,9 +37,9 @@ for (const rep of allReputation) console.log(rep); // for of loop give only elem
 
 // -----------------------------
 const keys=Object.keys(studentProfile.dept);
-console.log(keys); //[ 'cse', 'eee', 'eng' ]
+// console.log(keys); //[ 'cse', 'eee', 'eng' ]
 
-const values= Object.values(studentProfile.dept)
+const values= Object.values(studentProfile.dept);
 console.log(values);
 /*
 [
@@ -62,7 +62,7 @@ for (const rep of allReputation.entries()){
 // destructuring rep
 //  [ key , value ]
 for (const [idx, element] of allReputation.entries()) {
-//   console.log(`${idx} : ${element}`);
+  console.log(`${idx} : ${element}`);
   //  0 : [object Object]
   //  1 : [object Object]
 //   here output gives [object Object]. ok.. bcz, element is a object

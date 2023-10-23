@@ -8,6 +8,7 @@ rest.set('name','Italiano')
 .set(true, 'open')
 .set(false, 'close')
 // console.log(rest.set(2, 'Burger King'));
+console.log(typeof rest); //object
 
 
 console.log(rest.get('name'));

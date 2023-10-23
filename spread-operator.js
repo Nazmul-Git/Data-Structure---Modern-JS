@@ -63,13 +63,12 @@ studentProfile.reputationColor(newReputation[0], newReputation[1]); //// last a 
 studentProfile.reputationColor(...newReputation ); // last a undefine nai.
 studentProfile.reputation=[...studentProfile.reputation, ...newReputation];
 // console.log(studentProfile.reputation);
-// console.log(studentProfile.reputation);
 
 // -----copy----
 const studentProfileCopy={...studentProfile};
 studentProfileCopy.studentName='Spread Operator';
-// console.log(studentProfileCopy.studentName);
-// console.log(studentProfile.studentName);
+console.log(studentProfileCopy.studentName);
+console.log(studentProfile.studentName);
 
 //  SPREAD- because on right side of equal
 const arr5=[1,2, ...[3,4,5]];
@@ -83,7 +82,7 @@ const [a,b, ...others]=[1,2,3,4,5];
 
 //**REST in object**
 const {cse, ...withoutCse}=studentProfile.dept;
-// console.log(withoutCse);
+console.log(withoutCse);
 
 //**spread in function**
 //  Rest parameter
@@ -94,7 +93,7 @@ const add=(...numbers)=>{
         sum+=numbers[i];
         
     };
-    console.log(sum);
+    // console.log(sum);
 }
 
 add(1,2,3,4,5,6,7,8,9); //45

@@ -7,13 +7,14 @@ const newSet= new Set([
     'pizza',
     'pasta'
 ]);
-console.log(newSet);
+// console.log(typeof newSet); //object
+// console.log(newSet);
 // Set(5) { 'pizza', 'pasta', 'sandwich', 'burger', 'Pizza' }
 console.log(newSet.size); //5
 console.log(newSet.has('pasta')); //true
 console.log(newSet.has('burrito')); //false
 console.log(newSet.add('Garlic Bread'));
-// console.log(newSet.clear()); //Set(0)
+
 /*
 Set(6) {
   'pizza',
@@ -24,6 +25,7 @@ Set(6) {
   'Garlic Bread'
 }
 */
+// console.log(newSet.clear()); //Set(0)
 console.log(newSet.delete('Pizza')); //true
 console.log(newSet);
 //  Set(5) { 'pizza', 'pasta', 'sandwich', 'burger', 'Garlic Bread' }
