@@ -88,3 +88,14 @@ const passHide=(pass)=>{
 console.log(passHide(1455236552));
 console.log(passHide('1455236552'));
 
+// Repeat
+const message='Hello!! ... i am JavaScript.';
+console.log(message.repeat(5));
+
+
+const repeatString=(n)=>{
+  console.log(`There are ${n} star here ${'*'.repeat(n)}`);
+}
+repeatString(5);   //*****
+repeatString(10); //**********
+repeatString(15);//***************
