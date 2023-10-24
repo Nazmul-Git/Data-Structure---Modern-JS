@@ -64,3 +64,23 @@ console.log(priceBD.includes("TK")); //true
 
 // startWith , endsWith
 console.log(priceBD.startsWith("288") && priceBD.endsWith("TK")); //true
+
+
+// split
+const  capitalizeName=(name)=>{
+    const names=name.split(' ');
+    const nameUpper=[];
+    for(const n of names){
+        // nameUpper.push(n[0].toUpperCase() + n.slice(1));
+        nameUpper.push(n.replace(n[0], n[0].toUpperCase()));
+    }
+    console.log(nameUpper.join(' '));
+};
+capitalizeName('md. nazmul hasan sunny');
+
+
+// padding
+const passHide=(pass)=>{
+ 
+}
+passHide('sunny5862');

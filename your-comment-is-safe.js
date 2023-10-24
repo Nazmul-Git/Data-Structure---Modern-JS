@@ -8,6 +8,8 @@ const yourComment=(str)=>{
             }
         }
         
+    }else{
+        console.log('no comment here.');
     }
 }
 yourComment('I fuck you, ass hole.');
