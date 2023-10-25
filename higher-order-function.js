@@ -64,3 +64,28 @@ const greetArrow=(greeting)=>{
 }
 const sayHello=greetArrow('Hello!...');
 sayHello('good morning.');
+
+// real example----------------------------------------------
+
+const flight={
+    airline:'Bangladesh Airline',
+    iataCode:'BA',
+    bookings: [],
+    // bookNow:function(){},
+    bookNow(flightNum, name){
+        console.log(`${name} booked a seat on ${this.airline} flights ${this.iataCode}${flightNum}.`);
+        //output: Sunny booked a seat on Bangladesh Airline flights BA333.
+        this.bookings.push({flightIs:`${this.iataCode} ${this.flightNum}`, name});
+    }
+
+};
+flight.bookNow(333,'Sunny');
+flight.bookNow(123,'Siam');
+console.log(flight.bookings);
+/** output:
+[
+  { flightIs: 'BA undefined', name: 'Sunny' },
+  { flightIs: 'BA undefined', name: 'Siam' }
+]
+ */
+
