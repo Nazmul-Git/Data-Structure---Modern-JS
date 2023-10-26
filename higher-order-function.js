@@ -97,7 +97,7 @@ Nazmul booked a seat on Joy Bangla flights JB59.
 const booked=flight.bookNow;
 // booked(111, 'Ronaldo'); //TypeError: Cannot read properties of undefined
 // here..... TypeError: Cannot read properties of undefined
-// when we use function expression function then this keyword did not work.
+// when we use function expression (assign a function in a variable) then this keyword did not work.
 
 
 // 1. solve this issue: call method
@@ -118,9 +118,9 @@ booked.call(joyBangla, 109, 'Nazmul');
 
 // 2. solve this issue: apply method
 
-const flightData=[109, 'Nazmul'];
-booked.apply(joyBangla, flightData);
-console.log(joyBangla);
+const flightParamsData=[109, 'Nazmul'];
+booked.apply(joyBangla, flightParamsData);
+// console.log(joyBangla);
 
 /**output:
 {
@@ -132,3 +132,22 @@ console.log(joyBangla);
   ]
 }
  */
+
+// 3. or
+booked.call(joyBangla, ...flightParamsData);
+// console.log(joyBangla);
+/**
+{
+  airline: 'Joy Bangla',
+  iataCode: 'JB',
+  bookings: [
+    { flightIs: 'JB Joy Bangla', name: 'Nazmul' },
+    { flightIs: 'JB Joy Bangla', name: 'Nazmul' },
+    { flightIs: 'JB Joy Bangla', name: 'Nazmul' }
+  ]
+}
+ */
+
+//  4. bind method
+const bookedBind=booked.bind(joyBangla);
+bookedBind(101,'Alamin');
