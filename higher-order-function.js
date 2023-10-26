@@ -66,6 +66,7 @@ const sayHello=greetArrow('Hello!...');
 sayHello('good morning.');
 
 //---------------------------------------------- real example----------------------------------------------
+// A function into object name bookNow use-(for that each object can use me) multiple times by different objects-(here function access object keys use this keyword) without re-write the function many time.
 
 const flight={
     airline:'Bangladesh Airline',
@@ -149,5 +150,60 @@ booked.call(joyBangla, ...flightParamsData);
  */
 
 //  4. bind method
+/**
+ * Another method is bind() method that solve 
+   when we use function expression (assign a function in a variable) then this keyword did not work.
+ */
 const bookedBind=booked.bind(joyBangla);
 bookedBind(101,'Alamin');
+console.log(joyBangla);
+/**output:
+ {
+  airline: 'Joy Bangla',
+  iataCode: 'JB',
+  bookings: [
+    { flightIs: 'JB Joy Bangla', name: 'Nazmul' },
+    { flightIs: 'JB Joy Bangla', name: 'Nazmul' },
+    { flightIs: 'JB Joy Bangla', name: 'Nazmul' },
+    { flightIs: 'JB Joy Bangla', name: 'Alamin' }
+  ]
+}
+ */
+
+// 
+const bijoy71={
+  airline:'Bijoy 71',
+  iataCode:'B71',
+  bookings:[]
+}
+const bijoyBind=booked.bind(bijoy71);
+bijoyBind(100, 'rokon'); //working
+
+const paramsVariable=[55, 'Rifat'];
+bijoyBind(...paramsVariable); //working
+
+console.log(bijoy71);
+
+
+
+/**
+ * Over all concept:
+ * Suppose you are a higher order function and you stay on the top of the BURJ-KHALIFA. On the other hand, a lower order function have this BURJ-KHALIFA'S ground.Now you want to call the lower order function directly with your object property and lower order function parameter, without via (like, without go to him by stairs or lift.). For this, we assigning lower order function in a variable and call like, assigningVariable(with your obj property and lower order function parameter ).But did not work, give an TypeError: Cannot read properties of undefined. Now for the solution we can use some method :
+ * 
+ *  assigned-lower-order-function_variable = lower order function;
+ * 
+ * 1.call() method:
+ *  assigned-lower-order-function_variable.call(obj with property and lower order function parameter);
+ * 
+ * 2. apply() method:
+ *  lower-order-function-parameter_variable = [lower order function parameters];
+ *  assigned-lower-order-function_variable.apply(obj with property and lower-order-function-parameter_variable );
+ * 
+ * 3. call() method:
+ *  assigned-lower-order-function_variable.call(obj with property and ...lower-order-function-parameter_variable );
+ * 
+ * 4. bind() method
+ *  binded = assigned-lower-order-function_variable.bind(your object);
+ *  binded(...lower-order-function-parameter_variable);
+ * 
+ */
