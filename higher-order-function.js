@@ -170,13 +170,13 @@ console.log(joyBangla);
 }
  */
 
-// 
+//  bind method
 const bijoy71={
   airline:'Bijoy 71',
   iataCode:'B71',
   bookings:[]
-}
-const bijoyBind=booked.bind(bijoy71);
+};
+const bijoyBind=booked.bind(bijoy71); // assigned variable.bind(object)
 bijoyBind(100, 'rokon'); //working
 
 const paramsVariable=[55, 'Rifat'];
@@ -188,7 +188,7 @@ console.log(bijoy71);
 
 /**
  * Over all concept:
- * Suppose you are a higher order function and you stay on the top of the BURJ-KHALIFA. On the other hand, a lower order function have this BURJ-KHALIFA'S ground.Now you want to call the lower order function directly with your object property and lower order function parameter, without via (like, without go to him by stairs or lift.). For this, we assigning lower order function in a variable and call like, assigningVariable(with your obj property and lower order function parameter ).But did not work, give an TypeError: Cannot read properties of undefined. Now for the solution we can use some method :
+ * Suppose you are a higher order function and you stay on the top of the BURJ-KHALIFA. On the other hand, a lower order function have this BURJ-KHALIFA'S ground.Now you want to call the lower order function directly with your object property and lower order function parameter, without via (like, without go to him by stairs or lift.). For this, we assigning lower order function in a variable and call like, assigningVariable(with your object and lower order function parameter ).But did not work, give an TypeError: Cannot read properties of undefined. Now for the solution we can use some method :
  * 
  *  assigned-lower-order-function_variable = lower order function;
  * 
