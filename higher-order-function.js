@@ -131,7 +131,7 @@ booked.apply(joyBangla, flightParamsData);
     { flightIs: 'JB Joy Bangla', name: 'Nazmul' },
     { flightIs: 'JB Joy Bangla', name: 'Nazmul' }
   ]
-}
+}\\\\\\\\\\\\\\
  */
 
 // 3. or
@@ -182,7 +182,9 @@ bijoyBind(100, 'rokon'); //working
 const paramsVariable=[55, 'Rifat'];
 bijoyBind(...paramsVariable); //working
 
-console.log(bijoy71);
+// console.log(bijoy71);
+
+
 
 
 
@@ -207,3 +209,27 @@ console.log(bijoy71);
  *  binded(...lower-order-function-parameter_variable);
  * 
  */
+
+
+
+// ----------Another Example ----------------------------
+const addTax=(rate, value)=>value+value*rate;
+console.log(addTax(0.5,100)); //150
+
+// use addTax function 
+const addVat=addTax.bind(null,0.5);  //first parameter of bind is this keyword/object. here use null.  then fn argument  
+console.log(addVat(100)); //150
+
+
+
+
+
+
+// -------------function return a new function----------
+const addTextRate= function(rate){
+  return function(value){
+    return value+value*rate;
+  }
+}
+const addVat2=addTextRate(0.5);
+console.log(addVat2(100));  //150
