@@ -48,7 +48,7 @@ console.dir(f);  //[Function: f]
 const passenger=function(n,wait){
     const perGroup=n/3;
 
-    // inside setTimeout have anonymous callback function and time parameters.
+    // inside setTimeout function have anonymous callback function and time parameters.
     setTimeout(function(){
         console.log(`Passengers are ${n}`);
         console.log(`There are 3 groups, each with ${perGroup} passengers.`)
