@@ -214,22 +214,31 @@ bijoyBind(...paramsVariable); //working
 
 // ----------Another Example ----------------------------
 const addTax=(rate, value)=>value+value*rate;
-console.log(addTax(0.5,100)); //150
+// console.log(addTax(0.5,100)); //150
+
+
+const x=addTax(0.5,100);
+// console.log('x',x); //150
+
+const y=addTax(0.5,100);
+// console.log(y(0.5,100)) //TypeError: y is not a function
+
+
+const z=addTax;
+// console.log(z(0.5,100)) //150
 
 // use addTax function 
-const addVat=addTax.bind(null,0.5);  //first parameter of bind is this keyword/object. here use null.  then fn argument  
+const addVat=addTax.bind(null,0.5);
 console.log(addVat(100)); //150
 
 
 
 
-
-
 // -------------function return a new function----------
-const addTextRate= function(rate){
+const addTaxRate= function(rate){
   return function(value){
     return value+value*rate;
   }
 }
-const addVat2=addTextRate(0.5);
-console.log(addVat2(100));  //150
+const addVat2=addTaxRate(0.5);
+// console.log(addVat2(100));  //150
